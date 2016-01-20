@@ -78,7 +78,7 @@ if __name__ == "__main__":
     
     ip = parsed_args.target
     
-    #for port in port_list: 
-    #    NmapScanner().nmapScan(ip, port)
+    for port in port_list: 
+        NmapScanner().nmapScan(ip, port)
         
     NmapScanner().nmapScanJSONGenerate(ip,parsed_args.ports)
