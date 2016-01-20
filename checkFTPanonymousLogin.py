@@ -21,7 +21,8 @@ def ftpListDirectory(ftp):
 def anonymousLogin(hostname):
     try:
         ftp = ftplib.FTP(hostname)
-        ftp.login('anonymous', '')
+        connect = ftp.login('anonymous', '')
+	print connect
         print(ftp.getwelcome())
         ftp.set_pasv(1)
         #ftp.storbinary('STOR myfile.txt', open('file.txt', 'rb'))
